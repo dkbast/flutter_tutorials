@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:localization/app_localizations.dart';
 
 class MaterialDesignCard extends StatelessWidget {
   const MaterialDesignCard({
@@ -8,6 +9,7 @@ class MaterialDesignCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var translate = AppLocalizations.of(context).translate;
     return ConstrainedBox(
       constraints: BoxConstraints(maxWidth: 344),
       child: Card(
@@ -33,14 +35,14 @@ class MaterialDesignCard extends StatelessWidget {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Text(
-                              'Title goes here',
+                              translate('widget_title'),
                               style: Theme.of(context)
                                   .textTheme
                                   .headline6
                                   .copyWith(fontWeight: FontWeight.bold),
                             ),
                             Text(
-                              'Secondary text',
+                              translate('widget_secondary'),
                               style: Theme.of(context).textTheme.bodyText2,
                             )
                           ],
@@ -61,8 +63,7 @@ class MaterialDesignCard extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Text(
-                      'Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor',
+                    child: Text(translate('widget_text'),
                       style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
@@ -77,7 +78,7 @@ class MaterialDesignCard extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.symmetric(horizontal: 8.0),
                               child: Text(
-                                'Action 1',
+                                translate('widget_action_1'),
                                 style: Theme.of(context).textTheme.button,
                               ),
                             ),
@@ -87,7 +88,7 @@ class MaterialDesignCard extends StatelessWidget {
                           onPressed: () {},
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                            child: Text('Action 2',
+                            child: Text(translate('widget_action_2'),
                                 style: Theme.of(context).textTheme.button),
                           ),
                         )

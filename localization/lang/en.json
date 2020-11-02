@@ -1,0 +1,9 @@
+{
+  "app_title":"Learning Localization",
+  "widget_title": "Title goes here",
+ "widget_secondary": "Secondary text",
+  "widget_text":
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor",
+  "widget_action_1": "Action 1",
+  "widget_action_2": "Action 2"
+}
